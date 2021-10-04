@@ -29,7 +29,7 @@ def game(name):
             questions_count += 1
         else:
             print(wrong_message.format(first=answer, second=correct_answer))
-            print("Let's try again, Bill!")
+            print("Let's try again, {name}!".format(name=name))
             break
 
     if questions_count == QUESTIONS_LIMIT:
