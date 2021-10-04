@@ -1,39 +1,21 @@
 import random
 
-import prompt
-
-from brain_games.scripts.cli import welcome_user
-
-QUESTIONS_LIMIT = 3
+from brain_games.scripts.games.common_game import common_game
 
 
 def main():
-    name = welcome_user()
-    game(name)
+    game()
 
 
-def game(name):
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    wrong_message = "'{first}' is wrong answer ;(. Correct answer was '{second}'."
-    questions_count = 0
+def generator():
+    number = random.randint(1, 100)
+    question = 'Question: {number}'.format(number=number)
+    correct_answer = 'yes' if number % 2 == 0 else 'no'
+    return question, correct_answer
 
-    while questions_count < QUESTIONS_LIMIT:
-        number = random.randint(1, 100)
-        print('Question: {number}'.format(number=number))
-        answer = prompt.string('Your answer: ').lower()
 
-        correct_answer = 'yes' if number % 2 == 0 else 'no'
-
-        if answer == correct_answer:
-            print('Correct!')
-            questions_count += 1
-        else:
-            print(wrong_message.format(first=answer, second=correct_answer))
-            print("Let's try again, {name}!".format(name=name))
-            break
-
-    if questions_count == QUESTIONS_LIMIT:
-        print('Congratulations, {name}!'.format(name=name))
+def game():
+    common_game('Answer "yes" if the number is even, otherwise answer "no".', generator)
 
 
 if __name__ == '__main__':
