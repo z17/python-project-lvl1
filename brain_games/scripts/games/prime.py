@@ -56,4 +56,3 @@ def generator():
 
 def prime_game():
     common_game('Answer "yes" if given number is prime. Otherwise answer "no".', generator)
-

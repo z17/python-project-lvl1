@@ -7,7 +7,7 @@ def generator():
     length = random.randint(5, 15)
     step = random.randint(1, 10)
     start = random.randint(1, 50)
-    skip_index = random.randint(0, length)
+    skip_index = random.randint(0, length - 1)
 
     progression = []
     for i in range(start, start + (length * step), step):
