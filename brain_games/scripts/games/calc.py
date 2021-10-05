@@ -13,7 +13,8 @@ def generator():
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)
     operation = OPERATIONS[random.randint(0, 2)]
-    question = 'Question: {number1} {operation} {number2}'.format(number1=number1, number2=number2, operation=operation)
+    question = 'Question: {number1} {operation} {number2}'.format(
+        number1=number1, number2=number2, operation=operation)
 
     correct_answer = False
     if operation == OPERATION_PLUS:

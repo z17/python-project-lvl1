@@ -8,7 +8,7 @@ QUESTIONS_LIMIT = 3
 def common_game(rules, generator):
     name = get_name()
     print(rules)
-    wrong_message = "'{first}' is wrong answer ;(. Correct answer was '{second}'."
+    wrong_message = "'{}' is wrong answer ;(. Correct answer was '{}'."
     questions_count = 0
 
     while questions_count < QUESTIONS_LIMIT:
@@ -20,7 +20,7 @@ def common_game(rules, generator):
             print('Correct!')
             questions_count += 1
         else:
-            print(wrong_message.format(first=answer, second=correct_answer))
+            print(wrong_message.format(answer, correct_answer))
             print("Let's try again, {name}!".format(name=name))
             break
 

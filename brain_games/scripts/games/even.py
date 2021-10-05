@@ -11,4 +11,5 @@ def generator():
 
 
 def even_game():
-    common_game('Answer "yes" if the number is even, otherwise answer "no".', generator)
+    common_game('Answer "yes" if the number is even, otherwise answer "no".',
+                generator)
