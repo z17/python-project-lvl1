@@ -73,7 +73,7 @@ FIRST_PRIME_NUMBERS = [
 
 def generator():
     number = random.randint(1, 500)
-    question = 'Question: {}'.format(number)
+    question = '{}'.format(number)
     correct_answer = 'yes' if number in FIRST_PRIME_NUMBERS else 'no'
     return question, str(correct_answer)
 

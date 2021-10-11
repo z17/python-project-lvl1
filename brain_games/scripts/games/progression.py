@@ -16,7 +16,7 @@ def generator():
     correct_answer = progression[skip_index]
     progression[skip_index] = '..'
     sequence = " ".join(progression)
-    question = 'Question: {}'.format(sequence)
+    question = '{}'.format(sequence)
     return question, str(correct_answer)
 
 

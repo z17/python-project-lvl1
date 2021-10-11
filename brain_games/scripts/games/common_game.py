@@ -13,7 +13,7 @@ def common_game(rules, generator):
 
     while questions_count < QUESTIONS_LIMIT:
         (question, correct_answer) = generator()
-        print(question)
+        print('Question: {}'.format(question))
         answer = prompt.string('Your answer: ')
 
         if answer.lower() == correct_answer:

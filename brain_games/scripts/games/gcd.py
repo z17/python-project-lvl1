@@ -8,7 +8,7 @@ from brain_games.scripts.games.common_game import common_game
 def generator():
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)
-    question = 'Question: {} {}'.format(number1, number2)
+    question = '{} {}'.format(number1, number2)
     correct_answer = math.gcd(number1, number2)
     return question, str(correct_answer)
 
