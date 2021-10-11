@@ -1,6 +1,6 @@
 import random
 
-from brain_games.scripts.games.common_game import common_game
+from brain_games.games.common_game import common_game
 
 PROGRESSION_START_VALUE_MIN = 1
 PROGRESSION_START_VALUE_MAX = 50
@@ -13,7 +13,8 @@ PROGRESSION_LENGTH_VALUE_MAX = 15
 
 
 def generator():
-    length = random.randint(PROGRESSION_LENGTH_VALUE_MIN, PROGRESSION_LENGTH_VALUE_MAX)
+    length = random.randint(PROGRESSION_LENGTH_VALUE_MIN,
+                            PROGRESSION_LENGTH_VALUE_MAX)
     step = random.randint(PROGRESSION_STEP_VALUE_MIN,
                           PROGRESSION_STEP_VALUE_MAX)
     start = random.randint(PROGRESSION_START_VALUE_MIN,

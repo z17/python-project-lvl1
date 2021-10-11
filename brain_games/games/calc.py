@@ -1,6 +1,6 @@
 import random
 
-from brain_games.scripts.games.common_game import common_game
+from brain_games.games.common_game import common_game
 
 RANDOM_MIN_VALUE = 1
 RANDOM_MAX_VALUE = 100

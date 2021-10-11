@@ -1,4 +1,4 @@
-from brain_games.scripts.games.calc import calc_game
+from brain_games.games.calc import calc_game
 
 
 def main():
