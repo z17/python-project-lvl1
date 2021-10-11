@@ -2,6 +2,9 @@ import random
 
 from brain_games.scripts.games.common_game import common_game
 
+RANDOM_MIN_VALUE = 1
+RANDOM_MAX_VALUE = 100
+
 QUESTIONS_LIMIT = 3
 OPERATION_PLUS = '+'
 OPERATION_MINUS = '-'
@@ -10,9 +13,9 @@ OPERATIONS = [OPERATION_MINUS, OPERATION_PLUS, OPERATION_MULTIPLY]
 
 
 def generator():
-    number1 = random.randint(1, 100)
-    number2 = random.randint(1, 100)
-    operation = OPERATIONS[random.randint(0, 2)]
+    number1 = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
+    number2 = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
+    operation = random.choice(OPERATIONS)
     question = '{number1} {operation} {number2}'.format(
         number1=number1, number2=number2, operation=operation)
 
