@@ -1,7 +1,7 @@
 import math
 import random
 
-from engine.game_engine import run_game
+from brain_games.engine.game_engine import run_game
 
 RANDOM_MIN_VALUE = 1
 RANDOM_MAX_VALUE = 100
