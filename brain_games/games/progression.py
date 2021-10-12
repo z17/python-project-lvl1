@@ -1,6 +1,6 @@
 import random
 
-from brain_games.games.common_game import common_game
+from brain_games.engine.game_engine import run_game
 
 PROGRESSION_START_VALUE_MIN = 1
 PROGRESSION_START_VALUE_MAX = 50
@@ -11,8 +11,10 @@ PROGRESSION_STEP_VALUE_MAX = 50
 PROGRESSION_LENGTH_VALUE_MIN = 5
 PROGRESSION_LENGTH_VALUE_MAX = 15
 
+GAME_RULES = 'What number is missing in the progression?'
 
-def generator():
+
+def generate_game_round():
     length = random.randint(PROGRESSION_LENGTH_VALUE_MIN,
                             PROGRESSION_LENGTH_VALUE_MAX)
     step = random.randint(PROGRESSION_STEP_VALUE_MIN,
@@ -33,4 +35,4 @@ def generator():
 
 
 def progression_game():
-    common_game('What number is missing in the progression?', generator)
+    run_game(GAME_RULES, generate_game_round)

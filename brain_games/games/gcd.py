@@ -1,13 +1,15 @@
 import math
 import random
 
-from brain_games.games.common_game import common_game
+from engine.game_engine import run_game
 
 RANDOM_MIN_VALUE = 1
 RANDOM_MAX_VALUE = 100
 
+GAME_RULES = 'Find the greatest common divisor of given numbers.'
 
-def generator():
+
+def generate_game_round():
     number1 = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     number2 = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     question = '{} {}'.format(number1, number2)
@@ -16,4 +18,4 @@ def generator():
 
 
 def gcd_game():
-    common_game('Find the greatest common divisor of given numbers.', generator)
+    run_game(GAME_RULES, generate_game_round)

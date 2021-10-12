@@ -1,6 +1,6 @@
 import random
 
-from brain_games.games.common_game import common_game
+from brain_games.engine.game_engine import run_game
 
 RANDOM_MIN_VALUE = 1
 RANDOM_MAX_VALUE = 100
@@ -11,8 +11,10 @@ OPERATION_MINUS = '-'
 OPERATION_MULTIPLY = '*'
 OPERATIONS = [OPERATION_MINUS, OPERATION_PLUS, OPERATION_MULTIPLY]
 
+GAME_RULES = 'What is the result of the expression?'
 
-def generator():
+
+def generate_game_round():
     number1 = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     number2 = random.randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     operation = random.choice(OPERATIONS)
@@ -31,4 +33,4 @@ def generator():
 
 
 def calc_game():
-    common_game('What is the result of the expression?', generator)
+    run_game(GAME_RULES, generate_game_round)
